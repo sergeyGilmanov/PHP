@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
 }
-
+@keyframes bcg1 {
+    0%{opacity: 0}
+    100%{opacity: 100%}
+}
+@keyframes bcg2 {
+    0%{opacity: 0}
+    100%{opacity: 100%}
+}
 input {
     border: 1px solid #555;
     border-radius: 5px;
@@ -55,14 +62,19 @@ h1 {
     height: 50px;
     background: #333333;
 }
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
 .head_container {
     display: flex;
-    justify-content: space-around;
-    width: 110px;
+    justify-content: center;
+    width: 1100px;
     margin: 0 auto;
     box-sizing: border-box;
 }
 ul {
+    width: 800px;
     display: flex;
     justify-content: space-around;
 }
@@ -80,7 +92,90 @@ li:hover {
     color: dodgerblue;
     background-color: #212121;
 }
+.logo {
+    width: 25px;
+}
 .logo > img {
     width: 25px;
     margin: 10px 10px 0 0;
+}
+.wel {
+    color: whitesmoke;
+    font-size: 50px;
+    position: absolute;
+    top: 75px;
+    left: 15%;
+}
+.exit {
+    color: whitesmoke;
+    position: absolute;
+    top: 18px;
+    right: 50px;
+}
+.min_back {
+    position: relative;
+    background: #00000070;
+    margin-left: calc(50% - 250px) ;
+    margin-top: 25%;
+    max-width: 500px;
+    min-height: 200px;
+}
+/*product page */
+
+.prod_fielg {
+    margin: 0 auto;
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    margin: 50px 0 0 0;
+    box-sizing: border-box;
+    padding: 25px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+    border: 1px solid #99999945;
+}
+.prod_desc{
+    width: 250px;
+}
+.img {
+    width: 150px;
+    height: auto;
+}
+.img > img {
+    margin-top: 30px;
+    width: 150px;
+    height: auto;
+}
+h3{
+    color: #0f00ff;
+}
+h3,
+.desc {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 25px;
+    color: #555;
+}
+
+.btn{
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    background: royalblue;
+    color: whitesmoke;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background: dodgerblue;
 }

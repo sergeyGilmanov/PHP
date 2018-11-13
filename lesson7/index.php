@@ -19,9 +19,14 @@ if ( isset($data['signup']) ){
         echo 'Пользователь с таким логином не существует';
     }
 }
-if (isset($_SESSION['logget_user'])){
-    echo 'Привет ' . $_SESSION['logget_user']['login'] . '!<br>';
-    echo "<a href = 'exit.php'>Выход</a>";
+if (isset($_SESSION['logget_user'])){ ?>
+    <a href = 'exit.php' class="exit">Выход</a>
+     <div class='welcome container'>
+         <div class="min_back"><p class="wel">Welcome, <?echo $_SESSION['logget_user']['login'] ?><br></p>
+             <a href="product.php" style="color: white; font-size: 15px;position: absolute; top: 80%; left: 200px">Go to product</a>
+         </div>
+          </div>
+<?php
 } else {
 echo "<div class=\"wrapper\">
     <h1>Welcome to iPhone-Shop</h1>

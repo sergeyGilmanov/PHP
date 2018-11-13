@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
     <?php
 
-    if(array_pop(explode('/', $_SERVER['PHP_SELF'])) == 'index.php'){echo "<style>body{background: url(img/bcg.png) no-repeat 50% -20%;}</style>";
+    if(array_pop(explode('/', $_SERVER['PHP_SELF'])) == 'index.php'){echo "<style>.background{position:absolute; width: 100vw; height: 100vh;z-index: -1; background: url(img/bcg.png) no-repeat 50% 50%; animation: bcg1 5s; }</style>";
     }
-    if(array_pop(explode('/', $_SERVER['PHP_SELF'])) == 'reg.php'){echo "<style>body{background: url(img/bcg1_1.png) no-repeat  90% calc(100vh - 280px);}</style>";
+    if(array_pop(explode('/', $_SERVER['PHP_SELF'])) == 'reg.php'){echo " <style>.background{position:absolute; width: 100vw; height: 100vh;z-index: -1; background: url(img/bcg1_1.png) no-repeat  90% calc(100vh - 280px); animation: bcg1 5s; }</style>";
     }
     ?>
 </head>
 <body>
+<div class="background"></div>
 <div class="header">
     <div class="head_container">
         <div class="logo"><img src="img/apple.png" alt="logo"></div>
@@ -24,9 +25,9 @@
                 <li>Home</li>
             </a><a href="#">
                 <li>Contact</li>
-            </a><a href="#">
+            </a><a href="product.php">
                 <li>Product</li>
-            </a><a href="">
+            </a><a href="#">
                 <li>About us</li>
             </a><a href="#">
                 <li>Press media</li>
