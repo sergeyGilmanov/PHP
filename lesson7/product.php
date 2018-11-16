@@ -4,19 +4,25 @@ include("header.php");
 
 if (isset($_SESSION['logget_user'])){ ?>
 <a href = 'exit.php' class="exit">Выход</a>
+    <a href="cart.php"class="cart"><img src="img/cart.png" alt="cart"></a>
 
 
 <div class="prod_fielg">
     <?php
         $sql = "SELECT * FROM goods WHERE 1";
         $query = mysqli_query($connection, $sql);
+
         ;
-        while ( $result = mysqli_fetch_assoc($query) ):?>
+        while ( $result = mysqli_fetch_assoc($query) ):
+            $id = $result['id_prod'];?>
+
+
     <div class="product">
-        <div class="img"><img src="img/<? echo $result['img_prod']; ?>" alt="img"></div>
+        <div class="img"><img src="img/<? echo explode('/',$result['img_prod'])[0]; ?>" alt="img"></div>
         <div class="prod_desc">
             <h3><? echo $result['prod_name'];  ?></h3>
-            <p class="desc"><? echo substr($result['desc_prod'], 0, 200) . "..."; ?></p>
+
+             <? parseStr(explode('!', $result['desc_prod'], -13)); echo "<br><a href='single_page.php?id= $id' ><p style='margin-top: 5px'>Подробнее...</p></a><br><hr>"; ?>
             <span class="price"><? echo $result['price'] . ' руб.'; ?></span>
             <input class="btn" type="submit" value=" Add to cart">
         </div>

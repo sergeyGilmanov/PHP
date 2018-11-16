@@ -21,6 +21,7 @@ if ( isset($data['signup']) ){
 }
 if (isset($_SESSION['logget_user'])){ ?>
     <a href = 'exit.php' class="exit">Выход</a>
+    <a href="cart.php"class="cart"><img src="img/cart.png" alt="cart"></a>
      <div class='welcome container'>
          <div class="min_back"><p class="wel">Welcome, <?echo $_SESSION['logget_user']['login'] ?><br></p>
              <a href="product.php" style="color: white; font-size: 15px;position: absolute; top: 80%; left: 200px">Go to product</a>

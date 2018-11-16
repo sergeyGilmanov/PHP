@@ -7,13 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop</title>
     <link rel="stylesheet" href="css/style.css">
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
     <?php
 
     if(array_pop(explode('/', $_SERVER['PHP_SELF'])) == 'index.php'){echo "<style>.background{position:absolute; width: 100vw; height: 100vh;z-index: -1; background: url(img/bcg.png) no-repeat 50% 50%; animation: bcg1 5s; }</style>";
     }
     if(array_pop(explode('/', $_SERVER['PHP_SELF'])) == 'reg.php'){echo " <style>.background{position:absolute; width: 100vw; height: 100vh;z-index: -1; background: url(img/bcg1_1.png) no-repeat  90% calc(100vh - 280px); animation: bcg1 5s; }</style>";
     }
-    ?>
+     ?>
 </head>
 <body>
 <div class="background"></div>
