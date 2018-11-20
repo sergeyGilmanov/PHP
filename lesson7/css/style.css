@@ -37,8 +37,8 @@ input {
     background: dodgerblue;
 }
 .wrapper {
-    background: whitesmoke;
-    border: 1px solid #555555;
+    background: #fbfbfb;
+    border: 1px solid #55555510;
     border-radius: 15px;
     width: 300px;
     height: auto;
@@ -60,6 +60,7 @@ h1 {
     margin-bottom: 10px;
 }
 .header {
+
     width: 100%;
     height: 50px;
     background: #333333;
